@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    username: ${db.username}
+    password: ${db.password}
+    url: jdbc:h2:mem:userprofiledb
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+  cloud:
+    vault:
+      fail-fast: true
+server:
+  port: 8080
